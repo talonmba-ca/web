@@ -1,3 +1,4 @@
+'use client'
 import { cn } from '@/lib/utils'
 import { EyeIcon, EyeOffIcon } from 'lucide-react'
 import DisplayErrors from './DisplayErrors'
