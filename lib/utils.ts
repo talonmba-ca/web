@@ -16,7 +16,6 @@ export const copyToClipboard = async (text: string, alertTitle: string | null = 
   // }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const isStringArray = (arr: any[]): boolean => Array.isArray(arr) && arr.every((item) => typeof item === 'string')
 
 export const FORMATIONS = [

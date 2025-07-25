@@ -242,7 +242,13 @@ const FormationHome = () => {
         {/* WHO AM I */}
         <div className='bg-gradient-to-r from-emerald-800 to-green-600 p-6 skew-y-2 my-20'>
           <div className='flex flex-col md:flex-row items-center max-w-7xl m-auto -skew-y-2'>
-            <img src='/images/user.svg' alt='Who Am I' className='h-auto  w-[40%] ' />
+            {/* <img src='/images/user.svg' alt='Who Am I' className='h-auto  w-[40%] ' /> */}
+            <FadeInImage
+              path='/images/user.svg'
+              alt='Who Am I'
+              imageClassName='h-auto w-[40%] aspect-auto bg-transparent'
+              className='aspect-auto h-auto w-[40%]'
+            />
             <div className='flex flex-col p-6 flex-1'>
               <h2 className='text-5xl font-bold text-left text-white mb-4'>QUI SUIS-JE?</h2>
               <div className='flex flex-col gap-y-6 '>
