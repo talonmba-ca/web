@@ -1,5 +1,5 @@
 'use client'
-import { handleSignOut } from '@/lib/utils'
+// import { handleSignOut } from '@/lib/utils'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
@@ -11,7 +11,7 @@ const RequestError = ({ error, retry }: { error: any; retry?: () => void }) => {
     if (message) return
     if (axios.isAxiosError(error)) {
       if (error?.response?.data.logout) {
-        handleSignOut(error.response?.data.message || error.message).then(() => {})
+        // handleSignOut(error.response?.data.message || error.message).then(() => {})
         setMessage(error.response?.data.message || error.message)
       }
       if (error.code === 'ERR_NETWORK') {

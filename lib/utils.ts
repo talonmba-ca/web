@@ -6,12 +6,14 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const copyToClipboard = async (text: string, alertTitle: string | null = null) => {
-  try {
-    await navigator.clipboard.writeText(text)
-    // toast.success(alertTitle || 'Text copied to clipboard')
-  } catch (err) {
-    // toast.error(`Failed to copy text: ${err} `)
-  }
+  await navigator.clipboard.writeText(text)
+  console.log(alertTitle)
+  // try {
+  //   // toast.success(alertTitle || 'Text copied to clipboard')
+  //   // toast.success(alertTitle || 'Text copied to clipboard')
+  // } catch (err) {
+  //   // toast.error(`Failed to copy text: ${err} `)
+  // }
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
