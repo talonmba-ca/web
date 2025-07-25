@@ -138,7 +138,7 @@ export const OUR_SERVICES = [
       'Nos spécialistes vous offrent enfin, dans le respect des normes nationales et internationales en vigueur, des services de grande qualité en logistique et transport, d’une part, et en placement et recrutement à l’étranger, d’autre part.',
     link: '/placement',
     background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.25), transparent 70%), #000000',
-    extraClass: 'hover:border-[1px]l hover:border-blue-200',
+    extraClass: ' hover:border-blue-200',
     iconClass: 'shadow-blue-500'
   }
 ]
