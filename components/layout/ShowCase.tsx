@@ -1,11 +1,10 @@
-import { getCurrentLocale, getScopedI18n } from '@/locales/server'
+import {  getScopedI18n } from '@/locales/server'
 import Header from './Header'
 import Image from 'next/image'
 import { Button } from '../ui/button'
 
 const ShowCase = async () => {
   const t = await getScopedI18n('home.showcase')
-  const locale = await getCurrentLocale()
   return (
     <div className='flex-1 relative'>
       <div id='showcase' className='showcase bg-gradient-to-r  relative from-blue-700  to-pink-700'>

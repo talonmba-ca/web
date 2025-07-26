@@ -1,5 +1,5 @@
 // import AppLogo from '../global/AppLogo'
-import { getScopedI18n } from '@/locales/server'
+// import { getScopedI18n } from '@/locales/server'
 // import LocaleSwitcher from '../global/LocaleSwitcher'
 // import DonateButton from './DonateButton'
 // import { Suspense } from 'react'
@@ -10,7 +10,7 @@ import ToggleNavMobile from '../global/ToggleNavMobile'
 import FadeInImage from '../global/FadeInImage'
 
 const NabarItems = async ({ gradient = false, items }: { gradient: boolean; items: { title: string; link: string }[] }) => {
-  const t = await getScopedI18n('header')
+  // const t = await getScopedI18n('header')
   //   const donate = await getScopedI18n('donate')
 
   const menuItems = [

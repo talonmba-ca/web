@@ -1,4 +1,5 @@
 import { DetailsSummaryFAQ } from '@/components/global/DetailsSummaryFAQ'
+import prisma from '@/lib/prisma'
 import { Metadata } from 'next'
 import Link from 'next/link'
 
@@ -55,10 +56,16 @@ const faQuestions = [
   }
 ]
 
-const Contact = () => {
+const Contact =async () => {
+
+  const contacts = await prisma.contact.findMany()
+
+
+
   return (
     <>
       <div className='py-6 flex flex-col justify-center p-4 md:p-12 w-full md:max-w-4xl mx-auto my-10'>
+        <span className='text-white'>{JSON.stringify(contacts, null, 2)}</span>
         <div className='flex flex-col gap-y-4'>
           {faQuestions.map((faq, index) => (
             <DetailsSummaryFAQ

@@ -3,6 +3,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const RequestError = ({ error, retry }: { error: any; retry?: () => void }) => {
   const [message, setMessage] = useState<string | null>(null)
 
