@@ -12,7 +12,7 @@ const items = [
     icon: 'S',
     description: 'Trouvez les opportunités pour immigrer et travailler légalement au Canada.',
     link: '/p/travailler-au-canada',
-    image: '/images/hire.svg',
+    image: '/images/placement.svg',
 
     background: 'radial-gradient(125% 125% at 50% 100%, #000000 40%, #350136 100%)',
     extraClass: 'hover:border-[1px]l hover:border-pink-200',
@@ -23,7 +23,7 @@ const items = [
     title: 'Travailler au Québec',
     icon: 'L',
     description: 'Découvrez les opportunités professionnelles au Québec et ses programmes dédiés aux travailleurs étrangers.',
-    image: '/images/school.jpg',
+    image: '/images/education.svg',
 
     link: '/p/travailler-au-quebec',
     background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16, 185, 129, 0.25), transparent 70%), #000000',

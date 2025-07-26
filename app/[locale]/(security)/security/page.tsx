@@ -143,7 +143,7 @@ const Test = () => {
           </Link>
         </div>
         <div className='relative flex-1  w-full flex items-center justify-center from-primary mt-6'>
-          <Image src={`/images/security.png`} alt='Onboarding' width={500} height={1} className='relative object-cover ' />
+          <Image src={`/images/security.png`} alt='Onboarding' width={600} height={1} className='relative object-cover ' />
         </div>
       </div>
 

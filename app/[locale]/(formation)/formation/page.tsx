@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils'
+import { cn, DOT } from '@/lib/utils'
 import { ArrowRight, ChevronRight, PlusIcon } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
@@ -8,47 +8,96 @@ import FadeInImage from '@/components/global/FadeInImage'
 const items = [
   {
     title: 'Développement des compétences',
-    icon: 'S',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque alias ex porro dolor consectetur numquam vero odit aliquid?',
+      'Nos spécialistes et stratèges vous soutiennent dans tout le cycle des formations et du développement des compétences ou dans une ou des étapes de ce cycle, selon vos besoins.',
     link: '/formation/contact',
     background: 'radial-gradient(125% 125% at 50% 100%, #000000 40%, #350136 100%)',
     extraClass: '',
     iconClass: 'shadow-pink-500',
     buttonClass: 'border-slate-600 hover:border-violet-300/90 border text-violet-300/90',
     options: [
-      'Diagnostic des compétences à développer',
-      'Planification et développement de programmes de formation (individuel et d’équipe)',
-      'Évaluation des programmes et des services de formation',
-      'Conception et mise en œuvre de programmes',
-      'Conception, amélioration et mise en œuvre de plans de formation',
-      'Développement d’outils de formation',
-      'Développer d’outils d’évaluation des compétences',
-      'Animation de formations',
-      'Services en Mesure et évaluation',
-      'Recherche et demande de subvention'
+      {
+        title: 'Diagnostic des compétences à développer',
+        description:
+          'Dans une démarche adaptée à votre environnement et son évolution, nos spécialistes vous accompagnent pour mesurer l’écart entre les compétences des employés et les attentes de votre organisation. Les besoins en formation rattachés aux dossiers et mandats organisationnels sont identifiés localement, avec votre monde, grâce à des outils appropriés et dans le but de gagner continuellement en performance. '
+      },
+      {
+        title: 'Planification et développement de programmes de formation (individuel et d’équipe)',
+        description:
+          'Nos stratèges vous capacitent dans la priorisation des besoins et la définition des objectifs organisationnels de formation, en fonction de la disponibilité des parties prenantes, des enjeux, des bénéfices et des coûts pour votre organisation. Dans une cohérence stratégique, un programme de formations adapté à votre organisation est développé, avec une planification des sessions, du suivi et du pilotage de ces sessions. Après approbation institutionnelle, notre équipe vous accompagne dans la mise en œuvre de votre programme de formation, au besoin.'
+      },
+      {
+        title: 'Élaboration des outils et animation des sessions de formation',
+        description:
+          'Dans une approche pragmatique et actionnelle, nos spécialistes vous soutiennent dans la transformation ou l’élaboration d’outils appropriés pour développer les compétences associées à un contenu de formation existant, pour des résultats immédiats de formation. Ils sont disponibles pour former autrement votre personnel et animer autrement vos sessions de formation.'
+      },
+      {
+        title: 'Services en mesure et évaluation',
+        description:
+          'Nos spécialistes en mesure et évaluation vous accompagnent dans la mesure et l’évaluation des retombées des sessions et de votre programme de formation. Des indicateurs de performance, élaborés et adaptés à votre réalité, portent non seulement sur l’atteinte des objectifs organisationnels, mais aussi sur la motivation de votre personnel.Nos spécialistes vous offrent par ailleurs des services en mesure et évaluation pour répondre aux besoins organisationnels de développement de compétences en recrutement du personnel, en recherche de subventions ou autre. '
+      }
+      // {
+      //   title: 'Conception, amélioration et mise en œuvre de plans de formation',
+      //   description:
+      //     'Nous vous aidons à concevoir, améliorer et mettre en œuvre des plans de formation alignés sur les besoins de votre organisation.'
+      // },
+      // {
+      //   title: 'Développement d’outils de formation',
+      //   description: 'Nous développons des outils de formation sur mesure pour répondre aux besoins spécifiques de votre organisation.'
+      // },
+      // {
+      //   title: 'Développer d’outils d’évaluation des compétences',
+      //   description: 'Nous vous aidons à développer des outils d’évaluation des compétences pour mesurer l’impact de vos formations.'
+      // },
+      // {
+      //   title: 'Animation de formations',
+      //   description: 'Nous vous accompagnons dans l’animation de formations interactives et engageantes pour vos employés.'
+      // },
+      // {
+      //   title: 'Services en Mesure et évaluation',
+      //   description: 'Nous offrons des services de mesure et d’évaluation pour garantir l’efficacité de vos programmes de formation.'
+      // },
+      // {
+      //   title: 'Recherche et demande de subvention',
+      //   description: 'Nous vous aidons à identifier et à demander des subventions pour financer vos projets de formation.'
+      // }
     ]
   },
   {
     title: 'Conduite de changement signifiant',
-    icon: 'M',
     description:
-      'Accompagnement stratégique pour piloter des changements significatifs, de l’analyse des besoins à l’évaluation et la révision du changement.',
+      'Dans un environnement complexe et changeant, nos spécialistes et stratèges vous accompagnent dans la co-construction du sens des changements endogènes ou exogènes et dans la réalisation de tout le cycle du processus de votre transformation organisationnelle ou de certaines de ses étapes. ',
     link: '/formation/contact',
     background: 'radial-gradient(125% 125% at 50% 100%, #134e4a 40%, #10b981 100%)',
     extraClass: '',
     iconClass: 'shadow-green-500',
     buttonClass: 'border-emerald-700/40 hover:border-green-500/90 border text-green-300/90',
     options: [
-      'Énoncé et analyse des besoins de changement - Analyse de la situation de départ',
-      'Construction/Définition du sens du changement avec les parties prenantes',
-      'Alternatives/Options de solution avec identification des indicateurs de réalisation et de performance du changement',
-      'Prise de décision/Mise à l’agenda',
-      'Formulation du changement',
-      'Planification du changement',
-      'Implantation du changement - Projet pilote, au besoin',
-      'Suivi de mise en œuvre du changement',
-      'Évaluation et révision du changement'
+      {
+        title: 'Analyse des besoins et de la pertinence de changement',
+        description:
+          'Dans une démarche signifiante avec vos parties prenantes, nos stratèges vous accompagnent dans le diagnostic des sphères et des besoins de changement organisationnel, en lien avec vos objectifs organisationnels et votre environnement. Le sens construit ensemble oriente l’identification des nouvelles pratiques, les légitimise et facilite leur implantation, en réduisant les résistances et en encourageant l’engagement du personnel. '
+      },
+      {
+        title: 'Définition des objectifs et planification de changement',
+        description:
+          'En fonction des variables contextuelles, individuelles et relationnelles de votre organisation, nos spécialistes vous soutiennent dans l’identification des facteurs de protection et de risque existants et des options de changement possibles. Les options et la portée de transformation de votre organisation sont analysées, de même que les coûts associés, et des objectifs et indicateurs de leur atteinte sont définis. Selon l’origine interne ou externe de l’exigence de changement, vous êtes soutenu dans l’élaboration agile de l’échéancier de chaque réalisation du projet de changement.'
+      },
+      {
+        title: 'Mise en œuvre du changement ',
+        description:
+          'Nos spécialistes vous accompagnent dans une approche s’appuyant sur l’expérience et la collaboration (agile) et une approche de résolution de problèmes (LEAN). Ils intègrent l’offre de services en développement des compétences pour soutenir vos équipes stratégiques et opérationnelles dans l’implantation, le suivi du plan d’action et le pilotage du changement. Ils vous accompagnent aussi dans l’élaboration d’une stratégie et des outils de communication favorisant la mobilisation, la transparence et l’écoute, pour une mise en œuvre efficace et productive du changement.'
+      },
+      {
+        title: 'Évaluation de l’impact et révision du changement',
+        description:
+          'Nos spécialistes en mesure et évaluation vous accompagnent dans la mesure et l’évaluation de l’impact de chaque réalisation de changement sur votre culture organisationnelle et sur les pratiques de travail de votre personnel. Des indicateurs de performance, élaborés et adaptés à votre réalité, portent non seulement sur l’atteinte des objectifs organisationnels, mais aussi sur la motivation de votre personnel et sur leur accueil positif des changements.Nos spécialistes vous soutiennent dans les boucles de rétroaction entre les anciennes et les nouvelles pratiques, et même dans un nouveau cycle de changement, au besoin.'
+      }
+      // { title: 'Formulation du changement', description: '' },
+      // { title: 'Planification du changement', description: '' },
+      // { title: 'Implantation du changement - Projet pilote, au besoin', description: '' },
+      // { title: 'Suivi de mise en œuvre du changement', description: '' },
+      // { title: 'Évaluation et révision du changement', description: '' }
     ]
   }
 ]
@@ -66,13 +115,13 @@ const cibles = [
   },
   {
     title: 'Organisations parapubliques',
-    image: '/images/school.jpg',
+    image: '/images/education.svg',
     options: [
       'Centres de recherche universitaire',
       'Fédération des centres de services scolaires',
       'CSPNÉA Conseil Scolaire des Premières nations en éducation aux adultes',
       'Commissions scolaires Autochtone',
-      'Centres de services scolaires (employés et les employés des écoles, primaire à l’université – francophones)',
+      'Centres de services scolaires ',
       'Santé (ex: CLSC, CIUSSS)',
       'Universités'
     ]
@@ -116,9 +165,9 @@ const FormationHome = () => {
             <h1 className='text-white text-center font-bold text-4xl max-w-2xld md:text-5xl text-whited from-red-400 via-amber-400 to-yellow-400'>
               Stratégie - Conseils - Amélioration des pratiques
             </h1>
-            <div className='text-slate-300 text-lg max-w-2xl mx-auto text-center mt-1'>
-              Nous vous proposons une approche pragmatique pour vous aider à atteindre immédiatement vos objectifs organisationnels grâce à
-              deux blocs de services
+            <div className='text-slate-300 text-lg max-w-2xl mx-auto text-center my-3'>
+              Nous vous proposons une approche pragmatique, agile et contextualisée pour vous aider à atteindre immédiatement vos objectifs
+              organisationnels grâce à deux blocs de services complémentaires
             </div>
           </div>
           <div className='flex flex-wrap items-start flex-col md:flex-row gap-8'>
@@ -137,7 +186,7 @@ const FormationHome = () => {
                   <ul className='list-disc pl-5'>
                     {item.options.map((option, index) => (
                       <li key={index} className='text-slate-200 text-lg'>
-                        {option}
+                        {option.title}
                       </li>
                     ))}
                   </ul>
@@ -195,7 +244,7 @@ const FormationHome = () => {
           <div className="bg-[url('/images/square.png')] bg-cover bg-no-repeat bg-center ">
             <div className='flex items-start flex-col justify-start max-w-3xl m-auto '>
               <div className='w-12 h-1 bg-white mb-4 skew-y-1'></div>
-              <div className="skew-y-1 bg-[url('/svgs/dots-curve-bg.svg')]d ">
+              <div className='skew-y-1'>
                 <span className='text-white text-2xl md:text-3xl font-bold text-center text-balance'>
                   Rentabiliser les programmes de développement des compétences dans les grandes organisations en formant autrement les
                   employés et en transformant positivement leur rapport aux changements
@@ -221,18 +270,25 @@ const FormationHome = () => {
               atteindre?
             </div>
           </div>
-          <div className='flex flex-col md:flex-row items-center justify-center gap-6'>
-            {[1, 2, 4].map((item) => (
-              <div className='p-4 hover:bg-slate-800/60 rounded-md border border-slate-700 cursor-pointer' key={item}>
+          <div className='columns-3 gap-6 space-y-6'>
+            {[
+              'Votre organisation améliore sa performance, renforce sa compétitivité et atteint plus rapidement ses objectifs stratégiques',
+              "Votre organisation est outillée pour s'adapter aisément aux constants changements de structure, du marché, de la technologie ou de la réglementation, tout en améliorant l’engagement du personnel.",
+              'Votre personnel utilise le temps de formation pour développer des compétences spécifiques, faire avancer les dossiers et pour répondre à des besoins organisationnels réels, les sessions de formation étant des espaces de travail.',
+              'Les coûts de vos formations sont optimisés et même réduits, en raison de l’amélioration de la productivité.',
+              'En développant les compétences nécessaires pour assumer ses fonctions, votre personnel est plus motivé au travail.',
+              'Dans votre organisation, l’alignement des formations et des projets de changement avec les cibles stratégiques se démontre par des indicateurs de performance organisationnelle et par la satisfaction de votre personnel.'
+            ].map((item) => (
+              <div
+                className='p-4 hover:bg-slate-800/60 rounded-md border md:min-w-[300px] flex-1 border-slate-700 cursor-pointer'
+                key={item}
+              >
                 <div className='flex items-center justify-center w-12 h-12 rounded-full bg-slate-900/50 mb-2 border border-slate-700'>
                   <PlusIcon className='text-emerald-300' />
                 </div>
                 <div className=''>
-                  <p className='text-white font-bold text-2xl mb-1'>Lorem, ipsum dolor.</p>
-                  <p className='text-slate-300 text-lg'>
-                    Nous offrons des formations pour les entreprises, les organisations et les individus qui cherchent à améliorer leurs
-                    compétences et à se préparer aux défis du marché du travail.
-                  </p>
+                  {/* <p className='text-white font-bold text-2xl mb-1'>{item}</p> */}
+                  <p className='text-slate-300 font-medium text-lg'>{item}</p>
                 </div>
               </div>
             ))}
@@ -244,7 +300,7 @@ const FormationHome = () => {
           <div className='flex flex-col md:flex-row items-center max-w-7xl m-auto -skew-y-2'>
             {/* <img src='/images/user.svg' alt='Who Am I' className='h-auto  w-[40%] ' /> */}
             <FadeInImage
-              path='/images/user.svg'
+              path='/images/who-am-i.svg'
               alt='Who Am I'
               imageClassName='h-auto w-[40%] aspect-auto bg-transparent'
               className='aspect-auto h-auto w-[40%]'
@@ -276,16 +332,24 @@ const FormationHome = () => {
         {/* CIBLES */}
         <div className='my-24 p-6 max-w-7xl m-auto'>
           <div className='mb-8'>
-            <h2 className='text-5xl font-bold text-left text-white  text-gradient'>Vous êtes</h2>
-            <p className='text-slate-300 text-lg text-left max-w-2xl mt-1'>
-              Professionnelle ou professionnel Gestionnaire d’équipe Gestionnaire en ressources humaines Direction générale Membre de
-              conseil d’administration Direction des communications Responsable d’événements et de programmation de congrès, conférences,
-              formation et autres…
-            </p>
+            <h2 className='text-5xl font-bold text-left text-white mb-6 text-gradient'>Vous êtes</h2>
+            {[
+              'Professionnelle ou professionnel',
+              'Gestionnaire d’équipe',
+              'Gestionnaire en ressources humaines',
+              'Direction générale',
+              'Membre de conseil d’administration',
+              'Direction des communications',
+              'Responsable d’événements et de programmation de congrès, conférences, formation et autres…'
+            ].map((role, idx) => (
+              <p className='text-slate-300 text-lg text-left  mt-1' key={idx}>
+                {DOT} {role}
+              </p>
+            ))}
           </div>
           <div className='flex gap-8 flex-col md:flex-row items-start'>
             {cibles.map((item, idx) => (
-              <div className='bg-slate-700/70  p-3 rounded-lg flex flex-col group' key={idx}>
+              <div className='bg-slate-700/70 flex-1 p-3 rounded-lg flex flex-col group' key={idx}>
                 <FadeInImage path={item.image} alt='Cibles' imageClassName='rounded-t-sm' />
                 <div className='p-2'>
                   <h2 className='text-white font-bold text-2xl mb-2'>{item.title}</h2>
