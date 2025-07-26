@@ -22,7 +22,7 @@ export const ContactSchema = z.object({
   linkedin: z.url().max(100).optional().nullable().default(null),
   country: z.string().max(50).optional().nullable().default(null),
   company: z.string().max(100).optional().nullable().default(null),
-  message: z.string().max(500).min(10).endsWith('.'),
+  message: z.string().max(500).min(10),
   status: z.enum(['pending', 'resolved']).default('pending'),
   type: z.enum(CONTACT_TYPE)
 })
